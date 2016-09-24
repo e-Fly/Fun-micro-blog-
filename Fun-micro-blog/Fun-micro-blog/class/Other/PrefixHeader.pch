@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by 翟聪聪 on 16/5/18.
+//  Copyright © 2016年 翟聪聪公司名称. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+//#import "UIBarButtonItem+BDJLeftBar.h"
+//#import "UIView+BDJExtension.h"
+//#import "BDJConst.h"
+#ifdef DEBUG //调试
+#define BDJLog(...) NSLog(__VA_ARGS__)
+//#define AXH_LOG_INFO(frmt, ...) NSLog(frmt, ##__VA_ARGS__)
+#else//发布
+#define BDJLog(...)
+#endif
+
+#define BDJBounds [UIScreen mainScreen].bounds
+#define BDJScreenH (BDJBounds.size.height)
+#define BDJScreenW (BDJBounds.size.width)
+
+
+#define BDJColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define BDJlobalBg BDJColor(230, 230, 230)
+#define tagMargin 5
+#define BDJTabBarDidClickNotification @"BDJTabBarDidClickNotification"
+#endif /* PrefixHeader_pch */

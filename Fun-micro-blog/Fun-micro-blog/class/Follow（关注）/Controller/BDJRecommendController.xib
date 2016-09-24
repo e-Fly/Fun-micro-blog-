@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BDJRecommendController">
+            <connections>
+                <outlet property="listTableView" destination="zEz-dh-HWp" id="peM-ne-hHM"/>
+                <outlet property="userTableView" destination="qIW-qk-jDT" id="ln9-TW-M0l"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zEz-dh-HWp">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="2Gi-Xe-EFR"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2Gi-Xe-EFR"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="2Gi-Xe-EFR"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="i7N-Na-hTr"/>
+                        <outlet property="delegate" destination="-1" id="q4g-XR-oRU"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qIW-qk-jDT">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dAi-3D-PmV"/>
+                        <outlet property="delegate" destination="-1" id="uuh-wq-KfN"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qIW-qk-jDT" secondAttribute="bottom" id="BzX-ln-7Pe"/>
+                <constraint firstItem="zEz-dh-HWp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CpS-mu-ojP"/>
+                <constraint firstItem="zEz-dh-HWp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EFU-s0-jFo"/>
+                <constraint firstAttribute="bottom" secondItem="zEz-dh-HWp" secondAttribute="bottom" constant="255" id="KLe-cD-qgT">
+                    <variation key="widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="qIW-qk-jDT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SEQ-Rc-Uyy"/>
+                <constraint firstAttribute="trailing" secondItem="qIW-qk-jDT" secondAttribute="trailing" id="sr6-vc-b7S"/>
+                <constraint firstItem="qIW-qk-jDT" firstAttribute="leading" secondItem="zEz-dh-HWp" secondAttribute="trailing" id="tPY-HU-IR9"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="zEz-dh-HWp"/>
+                    <exclude reference="qIW-qk-jDT"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="BzX-ln-7Pe"/>
+                    <exclude reference="SEQ-Rc-Uyy"/>
+                    <exclude reference="sr6-vc-b7S"/>
+                    <exclude reference="tPY-HU-IR9"/>
+                    <exclude reference="CpS-mu-ojP"/>
+                    <exclude reference="EFU-s0-jFo"/>
+                    <exclude reference="KLe-cD-qgT"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="zEz-dh-HWp"/>
+                    <include reference="qIW-qk-jDT"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="BzX-ln-7Pe"/>
+                    <include reference="SEQ-Rc-Uyy"/>
+                    <include reference="sr6-vc-b7S"/>
+                    <include reference="tPY-HU-IR9"/>
+                    <include reference="CpS-mu-ojP"/>
+                    <include reference="EFU-s0-jFo"/>
+                    <include reference="KLe-cD-qgT"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="143" y="245"/>
+        </view>
+    </objects>
+</document>
